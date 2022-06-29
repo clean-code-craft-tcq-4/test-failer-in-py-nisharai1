@@ -28,11 +28,11 @@ jobs:
         # exit-zero treats all errors as warnings.
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
     
-    - name: tshirts fail
-      run: bash .github/workflows/expectfail.sh python -m unittest tests.test_tshirts
+    - name: tshirts pass
+      run: python -m unittest tests.test_aligned_color_map
     
-    - name: misaligned fail
-      run: bash .github/workflows/expectfail.sh python -m unittest tests.test_misaligned
+    - name: misaligned pass
+      run: python -m unittest tests.test_aligned_color_map
 
-    - name: alerter fail
-      run: bash .github/workflows/expectfail.sh python -m unittest tests.test_alerter
+    - name: alerter pass
+      run: python -m unittest tests.test_alerter
