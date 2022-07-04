@@ -3,7 +3,7 @@ alert_failure_count = 0
 
 def network_alert_stub(celcius):
     print(f'ALERT: Temperature is {celcius} celcius')
-    if celcius >= 100:
+    if celcius < 100:
         return 200
     else:
         return 500
